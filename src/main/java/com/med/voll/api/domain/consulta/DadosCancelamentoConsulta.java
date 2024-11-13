@@ -6,5 +6,6 @@ import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
-public record DadosCancelamentoConsulta(Long idConsulta) {
+public record DadosCancelamentoConsulta(Long idConsulta, @Future
+LocalDateTime data) {
 }

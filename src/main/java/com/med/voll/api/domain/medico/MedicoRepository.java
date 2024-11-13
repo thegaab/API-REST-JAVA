@@ -25,4 +25,12 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
             """
     )
     Medico escolherMedicoAleatorio(Especialidade especialidade, @NotNull @Future LocalDateTime data);
+
+    @Query("""
+            SELECT m FROM Medico m
+            WHERE m.ativo = true
+            AND m.id = :idMedico
+            """
+    )
+    Boolean findAtivoById(Long idMedico);
 }
