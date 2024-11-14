@@ -14,5 +14,5 @@ public record DadosCadastroPaciente(
         @Pattern(regexp = "\\d{10,11}")
         String telefone,
 
-        DadosEndereco endereco) {
+        String cpf, DadosEndereco endereco) {
 }
