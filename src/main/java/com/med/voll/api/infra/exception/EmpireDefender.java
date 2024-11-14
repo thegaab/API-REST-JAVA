@@ -22,6 +22,12 @@ public class EmpireDefender {
         return ResponseEntity.badRequest().body(message.stream().map(YodaErroValida::new).toList());
     }
 
+    @ExceptionHandler(AAAHRRRGGHHHAHException.class)
+    public ResponseEntity blasterErrorBusiness(MethodArgumentNotValidException e){
+
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
+
     private record YodaErroValida(String campo, String mensagem){
         public YodaErroValida(FieldError erro){
             this(erro.getField(), erro.getDefaultMessage());

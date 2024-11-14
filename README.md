@@ -73,3 +73,12 @@ A API possui os seguintes endpoints:
 - POST /api/consultas - Agendar uma nova consulta
 - PUT /api/consultas/{id} - Atualizar uma consulta
 - DELETE /api/consultas/{id} - Cancelar uma consulta
+
+## Documentação da API
+Este projeto utiliza o springdoc-openapi (versão 2.6.0) para gerar automaticamente a documentação da API em conformidade com o padrão OpenAPI.
+
+Acessando a Documentação
+A documentação da API pode ser acessada diretamente no navegador após o início do servidor, através do seguinte endereço:
+
+- **Swagger UI:** http://localhost:8080/swagger-ui.html
+- **Especificação OpenAPI em JSON:** http://localhost:8080/v3/api-docs
